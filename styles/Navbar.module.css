@@ -1,0 +1,113 @@
+.container {
+  height: 100px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: sticky;
+  
+}
+.item {
+  color: white;
+  flex:.7;
+}
+.text{
+  text-align: center;
+}
+.item:first-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.item:nth-child(2){
+  flex: 5;
+
+}
+
+.telephone {
+  background-color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+.menuItems {
+  display: flex;
+  list-style: none;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+  justify-content: center;
+  padding: 0;
+}
+.menuItem{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.menuItem:hover {
+color: red;
+cursor: pointer;
+}
+.logoWrapper {
+  font-family: "EB Garamond", serif;
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+font-size: 55px;
+color: red;
+cursor: pointer;
+}
+.shoppingbagWrapper{
+position: relative;
+cursor: pointer;
+display: flex;
+justify-content: flex-end;
+}
+
+.bagQuantity{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width:1000px) {
+  .item{
+    flex: 1;
+  }
+  .item:first-child{
+    display: flex;
+    align-items: flex-start;
+  }
+  .item:nth-child(3){
+    flex: 5;
+  }
+  .menuItem{
+    display: none;
+  }
+  .item:nth-child(2){
+    display: none;
+  } 
+
+}
+@media (max-width:600px){
+  .container{
+    padding: 0 15px;
+  }
+  .logo{
+    font-size: 35px;
+    text-align: center;
+  }
+}

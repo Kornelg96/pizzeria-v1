@@ -1,0 +1,72 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(23, 34, 55, .7);
+    z-index: 999;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255,.8);
+    
+}
+.wrapper{
+    width: 60vw;
+    border: 1px solid white;
+    background-color: black;
+position: relative;
+}
+
+.crossWrapper{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    cursor: pointer;
+}
+.crossWrapper:hover{
+    transform: scale(1.2);
+}
+.title{
+    text-align: center;
+    margin-top: 54px;
+    padding: 0 5px;
+    margin-bottom: 40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin: 10px 30px;
+  
+}
+.item input, .item label, .item textarea{
+flex: 1;
+display: flex;
+justify-content: space-between;
+padding: 10px;
+border-radius: 5px;
+
+}
+.wrapperButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 20px 0;
+}
+
+.button {
+    border: none;
+    background-color: white;
+    color: black;
+    padding: 10px 10px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: .9;
+    border-radius: 5px;
+  }
+  .button:hover{
+opacity: 1;
+  }

@@ -1,0 +1,126 @@
+.container {
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    position: relative;
+    
+  }
+  .title{
+    position: absolute;
+    color: white;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(35,31,32,.5);
+  }
+  .instruction{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+    height: 58px;
+    z-index: 3;
+    color: white;
+    font-size: 36px;
+    background: rgba(35,31,32,.5);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .instruction h2{
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+
+  }
+  
+  .button_menu{
+    position: absolute;
+    z-index: 3; 
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    margin: 0 auto;
+    padding: 25px;
+    color: white;
+    background-color: red;
+    border: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+
+  }
+  .button_buy{
+    position:absolute;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border: none;
+    text-transform: uppercase;
+    z-index: 3;
+    right: 200px;
+    bottom: 200px;
+    cursor: pointer;
+    width: 253px;
+    
+    
+  }
+  .button_buy_online{
+    position: absolute;
+    z-index: 3;
+    left: 200px;
+    bottom: 200px;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    border: none;
+    text-transform: uppercase;
+    width: 253px;
+    cursor: pointer;
+  }
+  
+  .wrapper {
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    transition: all 1.5s ease-in-out ;
+
+  }
+  
+  .imgContainer {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    /* background: rgba(35,31,32,.2); */
+  }
+
+
+  @media (max-width:1000px){
+    .button_buy_online{
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 400px;
+    }
+    .instruction{
+      bottom: 300px;
+    }
+    .button_buy{
+      right: 50%;
+      transform: translateX(50%);
+      bottom: 200px;
+    }
+    .button_menu{
+      display: none;
+    }
+  }
+  @media (max-width:600px){
+    .titleContainer h1{
+font-size: 26px;
+    }
+    .titleContainer h2{
+font-size: 22px;
+    }
+  }

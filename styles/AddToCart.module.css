@@ -1,0 +1,153 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  position: fixed;
+  background-color: rgba(24, 24, 24, 0.8);
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 65vw;
+  max-height: 60vh;
+  background-color: rgb(14, 14, 14);
+  position: relative;
+  color: rgb(240, 240, 240);
+  border: 1px solid rgb(240, 240, 240);
+  overflow: auto;
+}
+.crossWrapper {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+}
+.crossWrapper:hover {
+  transform: scale(1.2);
+}
+.productTitle {
+  text-align: center;
+  font-size: 32px;
+  border-bottom: 1px solid rgb(240, 240, 240);
+  padding: 20px 0;
+}
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+.productSizeTitle {
+  margin: 0 0 15px 0;
+  font-size: 22px;
+}
+.productSizes {
+  display: flex;
+  gap: 15px;
+}
+.label {
+  font-size: 20px;
+}
+.productQuantityWrapper {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.productQuantity {
+  max-width: 40px;
+  font-size: 18px;
+  margin-left: 15px;
+}
+.productIngredientTitle {
+  font-size: 22px;
+  margin: 20px 0 15px 0;
+}
+.labelExtra {
+  font-size: 18px;
+}
+.ingredientsWrapper {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+}
+.ingredients {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.ingredientsWrapper button {
+  border: none;
+  background-color: inherit;
+  color: rgb(62, 62, 255);
+  cursor: pointer;
+  font-size: 16px;
+}
+.extraContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.extraWrapper {
+  display: flex;
+}
+.extraCategory {
+  flex: 1;
+  margin-left: 15px;
+  font-size: 20px;
+  margin-right: 15px;
+  font-weight: bold;
+}
+.extraItemWrapper {
+  display: flex;
+  flex: 4;
+  justify-content: flex-start;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.extraItem {
+  width: 33%;
+}
+.buttonsWrapper {
+  margin: 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.buttonsWrapper button {
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgb(240, 240, 240);
+  background-color: inherit;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .productSizes {
+    flex-direction: column;
+  }
+  .productInfo {
+    margin-left: 20px;
+  }
+  .wrapper {
+    width: 75vw;
+    max-height: 80vh;
+  }
+}
+@media (max-width: 550px) {
+  .ingredientsWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wrapper {
+    width: 100vw;
+    max-height: 100vh;
+    background-color: rgb(14, 14, 14);
+    position: relative;
+    color: rgb(240, 240, 240);
+    border: 1px solid rgb(240, 240, 240);
+    overflow: auto;
+  }
+}
