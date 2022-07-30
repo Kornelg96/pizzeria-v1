@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import { reset } from "../redux/cartSlice";
 import {
-  
   PayPalScriptProvider,
   PayPalButtons,
   usePayPalScriptReducer,

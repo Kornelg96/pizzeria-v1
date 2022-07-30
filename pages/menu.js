@@ -29,19 +29,18 @@ const menu = ({ pizzaList, extraOptionList }) => {
                 {/* nowy item ? component */}
                 <ul className={styles.productsList}>
                     {pizzaList.map((pizza) => (
-                        <li key={pizza._id} className={styles.productsWrapper}>
-                            <div className={styles.div}>
+                        <li key={pizza._id} className={styles.productsContainer}>
+                            <div className={styles.productsWrapper}>
                                 <h2>{pizza.title}</h2>
                                 {pizza.extraOptions.map((extra, index) => (
                                     <span key={index}>{extra.text}, </span>
                                 ))}
                             </div>
-                            <div className={styles.div2}>
-                                <div className={styles.div3}>
-
-                                {pizza.prices.map((price, index) => (
-                                    <span key={index}>{price},00zł</span>
-                                ))}
+                            <div className={styles.priceContainer}>
+                                <div className={styles.priceWrapper}>
+                                    {pizza.prices.map((price, index) => (
+                                        <span key={index}>{price},00zł</span>
+                                    ))}
                                 </div>
                                 <button onClick={(e) => handleClick(e)} className={styles.buy} value={pizza._id}>Dodaj</button>
                             </div>

@@ -80,6 +80,14 @@
     margin-top: 20px;
     cursor: not-allowed;
   }
+  .buttonDeliveryPay{
+    color: red;
+    background-color: white;
+    height: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: not-allowed;
+  }
   
   @media screen and (max-width: 1000px) {
     .container {

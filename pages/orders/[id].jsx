@@ -4,12 +4,17 @@ import axios from "axios";
 
 const Order = ({order}) => {
   const status = order.status || 0;
+  
 
   const statusClass = (index) => {
     if (index - status < 1) return styles.done;
     if (index - status === 1) return styles.inProgress;
     if (index - status > 1) return styles.undone;
   };
+  const buttonStyle =()=>{
+    if (order.method === 1) return styles.button
+    else return styles.buttonDeliveryPay
+  }
   return (
     <div className={styles.container}>
       <div className={styles.left}>
@@ -42,6 +47,7 @@ const Order = ({order}) => {
           </table>
         </div>
         <div className={styles.row}>
+          {order.method === 1 && (
           <div className={statusClass(0)}>
             <Image src="/assets/paid.png" width={50} height={50} alt="" />
             <span>Zapłacone</span>
@@ -55,6 +61,7 @@ const Order = ({order}) => {
               />
             </div>
           </div>
+          )}
           <div className={statusClass(1)}>
             <Image src="/assets/bake.png" width={50} height={50} alt="" />
             <span>Przygotowywanie...</span>
@@ -108,8 +115,8 @@ const Order = ({order}) => {
           <div className={styles.totalText}>
             <b className={styles.totalTextTitle}>Kwota całkowita:</b>{order.total} zł
           </div>
-          <button disabled className={styles.button}>
-            Zapłacone
+          <button disabled className={buttonStyle()}>
+            {order.method === 1 ? "Zapłacone" : "Płatność przy odbiorze"}
           </button>
         </div>
       </div>
