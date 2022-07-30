@@ -3,17 +3,23 @@ import styles from "../styles/OrderDetails.module.css";
 import Image from "next/image";
 import { useState } from "react";
 
-const OrderDetails = ({ setOpenModal, total,createOrder }) => {
+const OrderDetails = ({ setOpenModal, total, createOrder }) => {
   const [customer, setCustomer] = useState({
     customerInfo: "",
     address: "",
-    number:"",
+    number: "",
   });
   const handleInfo = (e) => {
-    setCustomer((prev)=>({...prev,[e.target.name]:e.target.value}));
+    setCustomer((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
   const handleClick = () => {
-    createOrder({ customer:customer.customerInfo, address:customer.address, total, method: 0,number:customer.number });
+    createOrder({
+      customer: customer.customerInfo,
+      address: customer.address,
+      total,
+      method: 0,
+      number: customer.number,
+    });
   };
 
   return (
@@ -62,9 +68,9 @@ const OrderDetails = ({ setOpenModal, total,createOrder }) => {
           />
         </div>
         <div className={styles.wrapperButton}>
-        <button className={styles.button} onClick={handleClick}>
-          Złóż zamówienie
-        </button>
+          <button className={styles.button} onClick={handleClick}>
+            Złóż zamówienie
+          </button>
         </div>
       </div>
     </div>

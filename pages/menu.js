@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Menu.module.css'
 import { useState } from 'react'
 import AddToCart from '../components/AddToCart'
@@ -26,7 +24,6 @@ const menu = ({ pizzaList, extraOptionList }) => {
                         </li>
                     </ul>
                 </div>
-                {/* nowy item ? component */}
                 <ul className={styles.productsList}>
                     {pizzaList.map((pizza) => (
                         <li key={pizza._id} className={styles.productsContainer}>

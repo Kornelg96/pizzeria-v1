@@ -8,15 +8,14 @@ import MobileNavbar from "./MobileNavbar";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [mobile, setMobile] = useState(false);
-  if (typeof window !=="undefined"){
-    const userWidth = window.innerWidth
+  if (typeof window !== "undefined") {
+    const userWidth = window.innerWidth;
     useEffect(() => {
       if (userWidth <= 1000) {
         setMobile(true);
       }
     }, [userWidth]);
   }
-  
 
   const quantity = useSelector((state) => state.shoppingCart.cartquantity);
   return (
@@ -25,12 +24,7 @@ const Navbar = () => {
       <div className={styles.container}>
         {mobile && (
           <div className={styles.item} onClick={() => setOpen(true)}>
-            <Image
-              src="/assets/menu-left.png"
-              alt=""
-              width="32"
-              height="32"
-            />
+            <Image src="/assets/menu-left.png" alt="" width="32" height="32" />
           </div>
         )}
         <div className={styles.item}>
@@ -55,8 +49,8 @@ const Navbar = () => {
               </div>
             </Link>
             <li className={styles.menuItem}>Galeria</li>
-            <Link href='/#contact'>
-            <li className={styles.menuItem}>Kontakt</li>
+            <Link href="/#contact">
+              <li className={styles.menuItem}>Kontakt</li>
             </Link>
           </ul>
         </div>
@@ -77,7 +71,6 @@ const Navbar = () => {
       </div>
     </>
   );
-
 };
 
 export default Navbar;

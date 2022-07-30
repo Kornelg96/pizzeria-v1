@@ -6,13 +6,12 @@
   justify-content: space-between;
   padding: 0 50px;
   position: sticky;
-  
 }
 .item {
   color: white;
-  flex:.7;
+  flex: 0.7;
 }
-.text{
+.text {
   text-align: center;
 }
 .item:first-child {
@@ -20,11 +19,9 @@
   flex-direction: column;
   align-items: center;
 }
-.item:nth-child(2){
+.item:nth-child(2) {
   flex: 5;
-
 }
-
 .telephone {
   background-color: white;
   width: 42px;
@@ -44,69 +41,65 @@
   justify-content: center;
   padding: 0;
 }
-.menuItem{
+.menuItem {
   font-size: 18px;
   font-weight: bold;
 }
-
 .menuItem:hover {
-color: red;
-cursor: pointer;
+  color: red;
+  cursor: pointer;
 }
 .logoWrapper {
   font-family: "EB Garamond", serif;
   font-family: "Edu VIC WA NT Beginner", cursive;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-font-size: 55px;
-color: red;
-cursor: pointer;
+  font-size: 55px;
+  color: red;
+  cursor: pointer;
 }
-.shoppingbagWrapper{
-position: relative;
-cursor: pointer;
-display: flex;
-justify-content: flex-end;
+.shoppingbagWrapper {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
 }
-
-.bagQuantity{
-    position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bagQuantity {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-@media (max-width:1000px) {
-  .item{
+@media (max-width: 1000px) {
+  .item {
     flex: 1;
   }
-  .item:first-child{
+  .item:first-child {
     display: flex;
     align-items: flex-start;
   }
-  .item:nth-child(3){
+  .item:nth-child(3) {
     flex: 5;
   }
-  .menuItem{
+  .menuItem {
     display: none;
   }
-  .item:nth-child(2){
+  .item:nth-child(2) {
     display: none;
-  } 
-
+  }
 }
-@media (max-width:600px){
-  .container{
+@media (max-width: 600px) {
+  .container {
     padding: 0 15px;
   }
-  .logo{
+  .logo {
     font-size: 35px;
     text-align: center;
   }

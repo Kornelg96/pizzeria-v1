@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/Slider.module.css";
 import Link from "next/link";
 
@@ -13,16 +13,14 @@ const Slider = () => {
     "/assets/pizza-slider2.jpg",
     "/assets/pizza-slider3.jpg",
   ];
-
-
   const handleArrow = (direction) => {
     if (direction === "l") {
       setIndex(index !== 0 ? index - 1 : 2);
     }
     if (direction === "r") {
       setIndex(index !== 2 ? index + 1 : 0);
-    } else{
-      setIndex(index<2 ? index +1 : 0);
+    } else {
+      setIndex(index < 2 ? index + 1 : 0);
     }
   };
 
@@ -42,25 +40,31 @@ const Slider = () => {
           <h2>Najlepsza pizza we Wrocławiu</h2>
         </div>
       </div>
-          <div className={styles.instruction}>
-            <h2>LUB</h2>
-          </div>
-          <Link href='/menu'>
-      <button className={styles.button_menu}>Zobacz nasze Menu</button>
-          </Link>
-          <Link href='/menu'>
-      <button className={styles.button_buy}>Złóż zamówienie online</button>
-          </Link>
-      <button className={styles.button_buy_online} >
-      <a href="tel:+48555-555-555">Zadzwoń : 555 555 555</a>
-        </button>
+      <div className={styles.instruction}>
+        <h2>LUB</h2>
+      </div>
+      <Link href="/menu">
+        <button className={styles.button_menu}>Zobacz nasze Menu</button>
+      </Link>
+      <Link href="/menu">
+        <button className={styles.button_buy}>Złóż zamówienie online</button>
+      </Link>
+      <button className={styles.button_buy_online}>
+        <a href="tel:+48555-555-555">Zadzwoń : 555 555 555</a>
+      </button>
       <div
         className={styles.wrapper}
         style={{ transform: `translateX(${-100 * index}vw)` }}
       >
         {images.map((img, i) => (
           <div className={styles.imgContainer} key={i}>
-            <Image src={img} alt="" layout="fill" objectFit="cover" priority="true" />
+            <Image
+              src={img}
+              alt=""
+              layout="fill"
+              objectFit="cover"
+              priority="true"
+            />
           </div>
         ))}
       </div>

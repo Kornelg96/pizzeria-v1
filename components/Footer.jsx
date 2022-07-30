@@ -12,7 +12,6 @@ const Footer = () => {
           <p>adres :</p>
           <p>Wrocław ul.Pizzerri 13</p>
         </div>
-
         <div className={styles.item}>
           <Image src="/assets/time.png" width={40} height={40} />
           <p>godziny otwarcia:</p>
